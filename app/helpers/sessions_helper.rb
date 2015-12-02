@@ -1,7 +1,7 @@
 module SessionsHelper
 
   def log_in(hash)
-    user = User.find_by_email(hash['email'])
+    user = User.find_by_email(hash['username'])
     if user.authenticate(hash['password'])
       session = Session.create(user_id:(user.id), auth_key:(SecureRandom.hex))
       render json: {auth_key: session.auth_key, user_id: user.id}, status: 201
