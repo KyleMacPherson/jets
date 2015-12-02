@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107154148) do
+ActiveRecord::Schema.define(version: 20151202142502) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -185,6 +185,7 @@ ActiveRecord::Schema.define(version: 20151107154148) do
     t.string   "rank"
     t.string   "crew_member_aircraft_type"
     t.string   "other_employee_name"
+    t.string   "username"
   end
 
   add_foreign_key "events", "users"
